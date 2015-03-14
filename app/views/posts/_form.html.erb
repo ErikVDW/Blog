@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+  
+  <div>
+    <%= image_tag @post.image.full.url %>
+  </div>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -18,6 +21,14 @@
   <div class="field">
     <%= f.label :content %><br>
     <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div>
+    <%= f.label :remove_image %>
+    <%= f.check_box :remove_image %>
   </div>
   <div class="actions">
     <%= f.submit %>

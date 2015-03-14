@@ -5,7 +5,9 @@
 <% @posts.each do |post| %>
   <div class="panel panel-default">
     <div class="panel-body">
-      <h3><%= post.title %></h3>
+      <%= image_tag post.image.thumb.url %> <h3 style="display: inline"><%= post.title %></h3>
+      <br>
+      <br>
       <p>Posted: <%= post.created_at.strftime('%B %d %Y') %></p>
       <% if post.updated_at %>
         <p>Last updated: <%= time_ago_in_words(post.updated_at) %> ago</p>
